@@ -1,10 +1,10 @@
-import Home from "./components/home/Home";
-import Login from "./components/login/Login";
+// import Home from "./components/home/Home";
+// import Login from "./components/login/Login";
 import Register from "./components/register/Register";
-import "./sass/styles.scss";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "./context/AuthContext";
+import './sass/styles.scss';
+// import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+// import { useContext } from "react";
+// import { AuthContext } from "./context/AuthContext";
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
   //   return children;
 
   return (
-    <Register />
+    <Register/>
     // <BrowserRouter>
     //   <Routes>
     //     <Route path="/">
