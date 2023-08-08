@@ -1,5 +1,4 @@
-import React, { useContext, useReducer } from 'react'
-import { createContext } from "react";
+import React, { createContext, useContext, useReducer } from 'react'
 import { AuthContext } from './AuthContext';
 
 export const ChatContext = createContext();
@@ -7,7 +6,7 @@ export const ChatContext = createContext();
 export const ChatContextProvider = ({ children }) => {
   const { currentUser } = useContext(AuthContext);
   const INITIAL_STATE = {
-    chatId: "null",
+    chatId: null,
     user: {},
   };
 
@@ -16,15 +15,20 @@ export const ChatContextProvider = ({ children }) => {
       case "CHANGE_USER":
         return {
           user: action.payload,
-          chatId: currentUser.uid > action.payload.uid
+          chatId: currentUser
+          ? (currentUser.uid > action.payload.uid
             ? currentUser.uid + action.payload.uid
-            : action.payload.uid + currentUser.uid,
+            : action.payload.uid + currentUser.uid)
+          : null, // Handle case where currentUser is not available
+          // chatId: currentUser.uid > action.payload.uid
+          //   ? currentUser.uid + action.payload.uid
+          //   : action.payload.uid + currentUser.uid,
         };
 
       default:
         return state;
     }
-  }
+  };
   const [state, dispatch] = useReducer(chatReducer, INITIAL_STATE);
 
   return (

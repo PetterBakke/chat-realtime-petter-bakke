@@ -1,20 +1,19 @@
 import { initializeApp } from "firebase/app";
-// import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB2H4VHx86HM3U1dCyvR1jdLcjS9v2h4uc",
-  authDomain: "chat-realtime-c0a37.firebaseapp.com",
-  projectId: "chat-realtime-c0a37",
-  storageBucket: "chat-realtime-c0a37.appspot.com",
-  messagingSenderId: "705217341213",
-  appId: "1:705217341213:web:0055ff6949e4247f42e3f4",
-  measurementId: "G-JKFPD6R4K5"
+  apiKey: "AIzaSyD685taG5wjK1PlXviSHaOVpzOWZf3yIYs",
+  authDomain: "chat-bro-415c1.firebaseapp.com",
+  projectId: "chat-bro-415c1",
+  storageBucket: "chat-bro-415c1.appspot.com",
+  messagingSenderId: "501803425159",
+  appId: "1:501803425159:web:eda8d7a18890be456b0722"
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const storage = getStorage();
-// const analytics = getAnalytics(app);
+export const db = getFirestore();

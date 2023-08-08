@@ -1,16 +1,16 @@
-import React from 'react'
-// import Chats from '../chats/Chats'
-// import Navbar from '../navbar/Navbar'
-// import Search from "../search/Search"
+import React from 'react';
+import Chats from '../chats/Chats';
+import Navbar from '../navbar/Navbar';
+import Search from '../search/Search';
 
 function Sidebar() {
   return (
     <div className='sidebar'>
-      {/* <Navbar />
+      <Navbar />
       <Search />
-      <Chats /> */}
+      <Chats />
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

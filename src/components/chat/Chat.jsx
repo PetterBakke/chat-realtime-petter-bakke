@@ -8,10 +8,11 @@ import { ChatContext } from '../../context/ChatContext';
 
 function Chat() {
   const { data } = useContext(ChatContext);
+
   return (
     <div className='chat'>
       <div className='chatInfo'>
-        <span>{data.user?.name}</span>
+        <span>{data.user?.displayName}</span>
         <div className='chatIcons'>
           <AiFillVideoCamera className='icons'/>
           <MdAdd className='icons'/>
@@ -21,7 +22,7 @@ function Chat() {
         <Messages />
         <Input />
     </div>
-  )
-}
+  );
+};
 
 export default Chat

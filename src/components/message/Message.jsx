@@ -22,7 +22,7 @@ function Message({message}) {
         {message.img && <img src={message.img} alt="" />}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Message
